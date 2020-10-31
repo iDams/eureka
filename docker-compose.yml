@@ -1,0 +1,14 @@
+version: '3'
+services:
+  eureka:
+    build:
+      context: .
+      dockerfile: routing-service/Dockerfile
+    ports:
+      - 8050:8050
+  routing:
+    build:
+      context: .
+      dockerfile: eureka-service/Dockerfile
+    ports:
+      - 8761:8761

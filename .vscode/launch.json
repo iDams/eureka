@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-RoutingServiceApplication<routing-service>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "com.zilay.routingservice.RoutingServiceApplication",
+            "projectName": "routing-service",
+            "args": ""
+        }
+    ]
+}
