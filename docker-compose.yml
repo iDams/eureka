@@ -6,9 +6,25 @@ services:
       dockerfile: routing-service/Dockerfile
     ports:
       - 8050:8050
+    networks:
+      frontapp:
+        ipv4_address: 172.25.0.12
   routing:
     build:
       context: .
       dockerfile: eureka-service/Dockerfile
     ports:
       - 8761:8761
+    networks:
+      frontapp:
+        ipv4_address: 172.25.0.10
+
+
+networks:
+  frontapp:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: 172.25.0.0/16
+          gateway: 172.25.0.1
